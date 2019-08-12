@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="app.js"></script>
+</head>
+
+<body>
+<h1>Tip Calculator</h1>
+
+<form>
+    <p id="billHeader">Bill</p>
+    <input id="bill" type="number" value="" oninput="calculateTotals()"/>
+
+    <p id="tipHeading">Tip %</p>
+    <div id="container1">
+        <div class="button" id="decreaseTip" onclick="minusTip()">-</div>
+        <input class="number" type="number" id="tip" value="0"/>
+        <div class="button" id="increaseTip" onclick="plusTip()">+</div>
+    </div>
+
+    <p id="numberOfPeopleHeading">Number of People</p>
+    <div id="container2">
+        <div class="button" id="decreasePeople" onclick="minusPeople()">-</div>
+        <input class="number" id="people" value="1"/>
+        <div class="button" id="increasePeople" onclick="plusPeople()">+</div>
+    </div>
+
+    <div class="clearfix">
+        <p id="tipPerPersonHeader">Tip<br><span id="breakTipHeader">per person</span></p>
+        <p id="tipTotalPerPerson">0.00</p>
+    </div>
+
+    <div class="clearfix">
+        <p id="fullAmtPerPersonHeader">Total<br><span id="breakPeopleHeader">per person</span></p>
+        <p id="totalPerPerson">0.00</p>
+    </div>
+
+    <div class="clearfix" id="fullAmount">
+        <p id="fullAmountHeader">Full Amount</p>
+        <p id="total">0.00</p>
+    </div>
+</form>
+</body>
+</html>
